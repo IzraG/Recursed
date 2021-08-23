@@ -1,0 +1,328 @@
+[gd_scene load_steps=27 format=2]
+
+[ext_resource path="res://Boss/Boss.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Boss/Boss Area.gd" type="Script" id=2]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Enemy/Ghost.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Boss/Camera.gd" type="Script" id=5]
+[ext_resource path="res://Assets/Tilemaps/Tilemap_2all.png" type="Texture" id=6]
+[ext_resource path="res://Interactable/Item.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Audio/Battle_Theme_rev_with_repet.mp3" type="AudioStream" id=8]
+[ext_resource path="res://Boss/MAGICcircle.png" type="Texture" id=9]
+[ext_resource path="res://Levels_Recursed/assets/door1.png" type="Texture" id=10]
+[ext_resource path="res://UI/Fonts/bebas_neue/BebasNeue-Regular.ttf" type="DynamicFontData" id=11]
+[ext_resource path="res://Levels_Recursed/assets/door2.png" type="Texture" id=12]
+[ext_resource path="res://Boss/Door0_2.gd" type="Script" id=13]
+
+[sub_resource type="OccluderPolygon2D" id=1]
+polygon = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=4]
+points = PoolVector2Array( 0, 32, 64, 32, 64, 64, 0, 64 )
+
+[sub_resource type="ConvexPolygonShape2D" id=5]
+points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=6]
+points = PoolVector2Array( 32, 128, 0, 128, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=7]
+points = PoolVector2Array( 64, 128, 32, 128, 32, 0, 64, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=8]
+points = PoolVector2Array( 128, 64, 0, 64, 0, 32, 128, 32 )
+
+[sub_resource type="TileSet" id=9]
+resource_local_to_scene = true
+0/name = "Tilemap_2all.png 0"
+0/texture = ExtResource( 6 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 64, 0, 64, 64 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/occluder = SubResource( 1 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 2 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 3 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 4 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+1/name = "Tilemap_2all.png 1"
+1/texture = ExtResource( 6 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 192, 0, 64, 64 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 5 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+1/z_index = 0
+2/name = "Tilemap_2all.png 2"
+2/texture = ExtResource( 6 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 0, 32, 64, 128 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape = SubResource( 6 )
+2/shape_one_way = false
+2/shape_one_way_margin = 1.0
+2/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 6 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+2/z_index = 0
+3/name = "Tilemap_2all.png 3"
+3/texture = ExtResource( 6 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 448, 32, 64, 128 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape = SubResource( 7 )
+3/shape_one_way = false
+3/shape_one_way_margin = 1.0
+3/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 7 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+3/z_index = 0
+4/name = "Tilemap_2all.png 4"
+4/texture = ExtResource( 6 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 320, 192, 128, 64 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape = SubResource( 8 )
+4/shape_one_way = false
+4/shape_one_way_margin = 1.0
+4/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 8 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+4/z_index = 0
+5/name = "Tilemap_2all.png 5"
+5/texture = ExtResource( 6 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 288, 32, 128, 128 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+
+[sub_resource type="Animation" id=10]
+resource_name = "close_door"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 10 ) ]
+}
+
+[sub_resource type="Animation" id=11]
+resource_name = "open_door"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 12 ) ]
+}
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 53.8344, 83.8037 )
+
+[sub_resource type="DynamicFont" id=13]
+size = 60
+font_data = ExtResource( 11 )
+
+[node name="Boss Area" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 9 )
+format = 1
+tile_data = PoolIntArray( 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 458746, 0, 0, 458747, 0, 0, 458748, 0, 0, 589827, 0, 0, 589828, 0, 0, 589829, 0, 0, 589831, 0, 0, 589832, 0, 0, 589833, 0, 0, 786424, 0, 0, 786425, 0, 0, 786426, 0, 0, 917503, 0, 0, 851968, 0, 0, 851969, 0, 0, 1179635, 0, 0, 1179636, 0, 0, 1179637, 0, 0, 1179638, 0, 0, 1179639, 0, 0, 1179640, 0, 0, 1179641, 0, 0, 1179642, 0, 0, 1179643, 0, 0, 1179644, 0, 0, 1179645, 0, 0, 1179646, 0, 0, 1179647, 0, 0, 1114112, 0, 0, 1114113, 0, 0, 1114114, 0, 0, 1114115, 0, 0, 1114116, 0, 0, 1114117, 0, 0, 1114118, 0, 0, 1114119, 0, 0, 1114120, 0, 0, 1114121, 0, 0, 1114122, 0, 0, 1114123, 0, 0, 1114124, 0, 0, 1114125, 0, 0, 1114126, 0, 0, 1114127, 0, 0, 1114128, 0, 0, 1114129, 0, 0, 1114130, 0, 0, 1114131, 0, 0, 1114132, 0, 0, 1114133, 0, 0, 1114134, 0, 0, 1114135, 0, 0, 1114136, 0, 0, 1114137, 0, 0, 1114138, 0, 0, 1114139, 0, 0, 1114140, 0, 0, 1114141, 0, 0 )
+
+[node name="Area2D" type="StaticBody2D" parent="."]
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+position = Vector2( -693.477, 1028.85 )
+
+[node name="Ghost" parent="." instance=ExtResource( 4 )]
+position = Vector2( 345.251, 209.111 )
+
+[node name="TimerHujan" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[node name="TimerFaya" type="Timer" parent="."]
+wait_time = 6.0
+autostart = true
+
+[node name="TimerBall" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[node name="Camera" type="Camera2D" parent="."]
+position = Vector2( -171.439, 923.867 )
+offset = Vector2( -200, -300 )
+current = true
+smoothing_enabled = true
+script = ExtResource( 5 )
+
+[node name="Boss" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1511.13, 693.909 )
+
+[node name="bagi3" parent="." instance=ExtResource( 7 )]
+position = Vector2( 301.702, 224.173 )
+
+[node name="plus3" parent="." instance=ExtResource( 7 )]
+position = Vector2( -294.64, 329.666 )
+
+[node name="min20" parent="." instance=ExtResource( 7 )]
+position = Vector2( 293.691, 517.698 )
+
+[node name="kali4" parent="." instance=ExtResource( 7 )]
+position = Vector2( 542.015, 523.286 )
+
+[node name="plus1" parent="." instance=ExtResource( 7 )]
+position = Vector2( 352.503, 1000.7 )
+
+[node name="Kali5" parent="." instance=ExtResource( 7 )]
+position = Vector2( 15.0426, 751.475 )
+
+[node name="Kali52" parent="." instance=ExtResource( 7 )]
+position = Vector2( -428.45, 660.761 )
+
+[node name="Posisi random" type="Node2D" parent="."]
+position = Vector2( -809.574, 476.22 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 200.101, 817.395 )
+stream = ExtResource( 8 )
+autoplay = true
+max_distance = 1e+11
+attenuation = 0.378929
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -1005.27, -295.677 )
+scale = Vector2( 1.70711, 1.70711 )
+texture = ExtResource( 9 )
+
+[node name="Awan" type="Timer" parent="Sprite"]
+
+[node name="Door0" type="KinematicBody2D" parent="."]
+position = Vector2( -1749.08, 383.485 )
+script = ExtResource( 13 )
+
+[node name="Sprite" type="Sprite" parent="Door0"]
+position = Vector2( 1057.15, 629.061 )
+scale = Vector2( 0.841081, 0.947027 )
+texture = ExtResource( 10 )
+
+[node name="OpenDoor" type="AnimationPlayer" parent="Door0"]
+anims/close_door = SubResource( 10 )
+anims/open_door = SubResource( 11 )
+
+[node name="Area2D" type="Area2D" parent="Door0"]
+position = Vector2( 1051.85, 621.645 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door0/Area2D"]
+position = Vector2( 5.68124, 12.6625 )
+shape = SubResource( 12 )
+
+[node name="Label" type="Label" parent="Door0"]
+margin_left = 1040.38
+margin_top = 475.36
+margin_right = 1076.38
+margin_bottom = 547.359
+custom_fonts/font = SubResource( 13 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 5
+custom_constants/shadow_offset_y = 5
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="timeout" from="TimerHujan" to="." method="_on_TimerHujan_timeout"]
+[connection signal="timeout" from="TimerFaya" to="." method="_on_TimerFaya_timeout"]
+[connection signal="timeout" from="TimerBall" to="." method="_on_TimerBall_timeout"]
+[connection signal="animation_finished" from="Door0/OpenDoor" to="Door0" method="_on_OpenDoor_animation_finished"]
+[connection signal="body_entered" from="Door0/Area2D" to="Door0" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Door0/Area2D" to="Door0" method="_on_Area2D_body_exited"]
