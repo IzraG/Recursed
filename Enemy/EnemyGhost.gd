@@ -25,7 +25,6 @@ func _physics_process(delta):
 
 
 func _on_Hitbox_body_entered(body):
-	print(str('Body entered: ', body.get_name()))
 	if "Player" in body.name:
 		queue_free()
 		

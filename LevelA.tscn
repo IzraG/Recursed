@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Assets/LighOrb2.png" type="Texture" id=1]
 [ext_resource path="res://Interactable/Ladder.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Assets/Tilemaps/Tilemap_2all.png" type="Texture" id=6]
 [ext_resource path="res://Interactable/MovingTrap.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Interactable/MovingTrap2.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Enemy/EnemyGhost.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Assets/Torch.tres" type="Texture" id=10]
 [ext_resource path="res://Interactable/Door.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Interactable/SpikeTrap.tscn" type="PackedScene" id=12]
@@ -285,3 +286,9 @@ position = Vector2( 1430.28, 1021.32 )
 [node name="SpikeTrap" parent="." instance=ExtResource( 12 )]
 position = Vector2( 1713.3, 1023.98 )
 physics_material_override = SubResource( 10 )
+
+[node name="EnemyGhost2" parent="." instance=ExtResource( 9 )]
+position = Vector2( 1068.81, 492.904 )
+
+[node name="EnemyGhost" parent="." instance=ExtResource( 9 )]
+position = Vector2( 497.811, 322.904 )
